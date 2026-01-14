@@ -1,0 +1,977 @@
+/* ===== Landing Page CSS Start ===== */
+
+body{
+font-family: Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+/* Hero */
+.hero{
+background: linear-gradient(120deg,#ff00cc,#3333ff);
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+.logo{
+width:150px;
+margin-bottom:15px;
+}
+
+.cta-btn{
+display:inline-block;
+padding:12px 22px;
+background:#ffff00;
+color:#000;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+margin-top:10px;
+}
+
+/* Batch Box */
+/* ===== Batch Box Wrapper ===== */
+.batch-box {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* ===== Common Box Style ===== */
+.batch-box > div {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  text-align: center;
+  min-width: 180px;
+  flex: 1;
+}
+
+/* Headings */
+.batch-box h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Numbers / Price */
+.batch-box span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ===== Discount Box Special ===== */
+
+.discount-box p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.discount-box h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 992px) {
+  .batch-box > div {
+    min-width: 160px;
+    padding: 16px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 576px) {
+  .batch-box {
+    gap: 12px;
+  }
+
+  .batch-box > div {
+    flex: 0 0 48%;   /* 2 box per row */
+    min-width: unset;
+    padding: 14px 12px;
+  }
+
+  .batch-box h3 {
+    font-size: 14px;
+  }
+
+  .batch-box span {
+    font-size: 18px;
+  }
+
+  .discount-box h3 {
+    font-size: 16px;
+  }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 380px) {
+  .batch-box > div {
+    flex: 0 0 100%; /* 1 box per row */
+  }
+}
+
+
+.video-section {
+  background: linear-gradient(135deg, #6a00ff, #c400ff);
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.video-section h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Video Box */
+.video-box {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Thumbnail */
+.video-thumb {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-thumb img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Play Button */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 60px;
+  padding: 10px 28px;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .video-section h2 {
+    font-size: 18px;
+  }
+
+  .play-btn {
+    font-size: 45px;
+  }
+}
+
+/* ===== FSD এর সেকশন স্টাইল আপডেট CSS শুরু ===== */
+
+.learning{
+  padding:45px 20px;
+  text-align:center;
+  background: linear-gradient(135deg, #6a00ff, #c400ff);
+  color:#ffff;
+}
+
+/* চার কলামের গ্রিড */
+.grid-4{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap:15px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* প্রতিটা পার্টের কার্ড */
+.part{
+  background:#ffffff;
+  padding:18px;
+  border-radius:14px;
+  color:#000000;
+
+  transition: all .4s ease;
+}
+
+/* ভিতরের UL স্টাইল */
+.part ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+/* প্রতিটা লাইনের এনিমেশন ও ট্রান্সিশন */
+.part li{
+  padding:9px 8px;
+  font-weight:bold;
+  border-bottom:1px solid #eee;
+
+  /* শুরুতে হাইড থাকবে */
+  opacity:0;
+  transform:translateX(-20px);
+
+  transition:
+  transform .3s ease,
+  background .3s ease,
+  letter-spacing .3s ease,
+  opacity .4s ease;
+}
+
+/* হোভার করলে লাইনের মুভমেন্ট */
+.part li:hover{
+  background:#f0e5ff;
+  transform: translateX(10px);
+  letter-spacing:1px;
+}
+
+/* কার্ডে হোভার করলে পুরো বক্সের ইফেক্ট */
+.part:hover{
+  transform: translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* রেসপন্সিভ ডিজাইন */
+@media(max-width:900px){
+  .grid-4{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:500px){
+  .grid-4{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== FSD এর সেকশন স্টাইল আপডেট CSS শেষ ===== */
+
+.offer{
+background:#00ff99;
+padding:15px;
+border-radius:12px;
+margin-top:10px;
+}
+
+.src{
+color:red;
+font-weight:bold;
+}
+
+/* Form */
+/* ===== Enrollment সেকশনের CSS শুরু ===== */
+
+.enroll{
+
+  /* এখানে ছবি বা গ্রেডিয়েন্ট যাই দেন */
+  background: linear-gradient(120deg, #2b00ff, #a100ff);
+color: #ffff;
+  padding:40px 20px;
+  text-align:center;
+}
+
+/* ফরমের জন্য ভেতরের সাদা কনটেইনার */
+.enroll-container{
+  background:#ffffff;
+  padding:25px;
+  border-radius:16px;
+
+  max-width:420px;
+  margin:auto;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+  transition: all .4s ease;
+}
+
+/* ফরম স্টাইল */
+.enroll form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin:auto;
+}
+
+/* ইনপুট */
+.enroll input,
+.enroll select{
+  padding:11px;
+  border:1px solid #ccc;
+  border-radius:8px;
+
+  transition: all .3s ease;
+}
+
+/* ইনপুট হোভার/ফোকাস transition */
+.enroll input:hover,
+.enroll select:hover{
+  transform:scale(1.02);
+  border-color:#a100ff;
+}
+
+/* বাটন */
+.enroll button{
+  background:#ffff00;
+  color:#000000;
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+
+  transition:
+    transform .3s ease,
+    letter-spacing .3s ease;
+}
+
+/* বাটনে হোভার */
+.enroll button:hover{
+  transform:translateY(-3px);
+  letter-spacing:1px;
+}
+
+/* পুরো কার্ডে হোভার */
+.enroll-container:hover{
+  transform:translateY(-5px);
+}
+
+/* ===== Enrollment সেকশনের CSS শেষ ===== */
+/* ===== ফুটারের CSS শুরু ===== */
+
+.footer{
+  padding:40px 20px;
+
+  /* colorful gradient footer */
+  background: linear-gradient(135deg, #0a001f, #4b00a0);
+  color:#ffffff;
+
+  transition: all .4s ease;
+}
+
+/* ভিতরের বক্স */
+.footer-box{
+  max-width:900px;
+  margin:auto;
+}
+
+/* টাইটেল */
+.f-title{
+  font-size:22px;
+  margin-bottom:10px;
+
+  transition: letter-spacing .3s ease;
+}
+
+/* ফোন নাম্বারের স্টাইল */
+.phone{
+  font-size:18px;
+  font-weight:bold;
+  color:#ffff00;
+
+  transition:
+    transform .3s ease,
+    letter-spacing .3s ease;
+}
+
+/* হোভার করলে ফোনে ইফেক্ট */
+.phone:hover{
+  transform:scale(1.05);
+  letter-spacing:1px;
+}
+/* ===== hero সেকশনে ছবি পজিশন CSS শুরু ===== */
+
+/* নতুন layout */
+.hero-layout{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  padding:20px;
+}
+
+/* বাম পাশের কনটেন্ট */
+.hero-content{
+  width:60%;
+}
+
+/* ডান পাশের ছবি */
+.my-photo{
+  width:38%;
+  max-width:300px;
+
+  background:none;
+  border:none;
+
+  object-fit:contain;
+  border-radius:24px;
+
+  /* ট্রান্সিশন ইফেক্ট */
+  opacity:0;
+  transform:translateX(40px);
+
+  transition: transform .6s ease, opacity .7s ease;
+}
+
+/* Intersection হলে দেখাবে */
+.my-photo.show{
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* মোবাইলের জন্য */
+@media(max-width:900px){
+
+  .hero-layout{
+    flex-direction:column;
+  }
+
+  .hero-content,
+  .my-photo{
+    width:100%;
+    text-align:center;
+  }
+
+}
+
+/* আগের Footer ও batch-box এর CSS আগের মতোই থাকবে */
+
+/* ===== hero সেকশনে ছবি পজিশন CSS শেষ ===== */
+/* ===== বক্স ছাড়া লেখা ও ইফেক্টের CSS শুরু ===== */
+
+/* ===== ছবির নিচে লেখা attach CSS শুরু ===== */
+
+/* পুরো trainer area ডান পাশে */
+.trainer-area{
+  width:40%;
+  max-width:380px;
+  margin:0 auto;       /* ডান পাশে ঠেলে দেওয়া */
+  text-align:right;       /* লেখা ডান পাশে */
+  background:none;
+  border:none;
+}
+
+/* শুধু ছবি */
+.my-photo{
+  width:100%;
+  display:block;
+  background:none;
+  border:none;
+  object-fit:contain;
+  border-radius:24px;
+
+  opacity:0;
+  transform:translateY(20px);
+
+  transition: all .7s ease;
+}
+
+/* লেখা wrapper */
+.trainer-text{
+  width:80%;
+  max-width:380px;
+  margin:0;
+  text-align:center;
+}
+
+/* লাইনগুলোর শুরু অবস্থা */
+.trainer-text .line{
+  opacity:0;
+  transform:translateY(25px);
+  transition: all .6s ease;
+}
+
+/* দেখা যাওয়ার অবস্থা */
+.trainer-text .line.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* হোভার ইফেক্ট */
+.trainer-text .line:hover{
+  letter-spacing:1px;
+}
+
+/* মোবাইলের জন্য */
+@media(max-width:900px){
+
+  .trainer-area{
+    width:100%;
+    max-width:320px;
+    margin:auto;
+    text-align:center;
+  }
+
+  .trainer-text{
+    text-align:center;
+  }
+
+}
+
+/* ===== ছবির নিচে লেখা attach CSS শেষ ===== */
+/* ===== গ্যালারির CSS শুরু ===== */
+
+.gallery{
+  padding:50px 20px;
+  text-align:center;
+}
+
+/* filter */
+.album-filter{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+/* buttons */
+.filter-btn,
+.filter-btn{
+  padding:10px 18px;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:bold;
+
+  transition: transform .3s ease, letter-spacing .3s ease;
+}
+
+.filter-btn:hover{
+  transform:translateY(-3px);
+  letter-spacing:1px;
+}
+
+/* grid */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:12px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* images */
+.g-img{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  border-radius:18px;
+  cursor:pointer;
+  opacity:0;
+  transform:scale(.92);
+  transition: all .6s ease;
+}
+
+/* scroll effect */
+.g-img.show{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* hover */
+.g-img:hover{
+  transform:scale(1.04);
+}
+
+/* modal */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  background:none;
+}
+
+.modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:20px;
+}
+
+/* close */
+#close{
+  position:absolute;
+  top:20px;
+  right:25px;
+  font-size:32px;
+  cursor:pointer;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:500px){
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== গ্যালারির CSS শেষ ===== */
+/* ===== Footer নয়, শুধু Gallery এর CSS শুরু ===== */
+
+.gallery{
+  padding:50px 20px;
+  text-align:center;
+}
+
+.album-filter{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.filter-btn{
+  padding:10px 18px;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:bold;
+
+  transition: transform .4s ease, letter-spacing .3s ease;
+}
+
+.filter-btn:hover{
+  transform:scale(1.06);
+  letter-spacing:1px;
+}
+
+/* grid */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap:12px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* images */
+.g-img{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  border-radius:18px;
+  cursor:pointer;
+
+  opacity:0;
+  transform:scale(.92);
+
+  transition: all .6s ease;
+}
+
+.g-img.show{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* modal */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:none;
+  z-index:999;
+}
+
+.modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:20px;
+}
+
+#close{
+  position:absolute;
+  top:20px;
+  right:25px;
+  font-size:32px;
+  cursor:pointer;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .gallery-grid{
+    grid-template-columns:1fr 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width:500px){
+  .gallery-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+
+/* ===== Gallery এর CSS শেষ ===== */
+/* ===== Gallery সেকশনের ব্যাকগ্রাউন্ড CSS শুরু ===== */
+
+.gallery{
+
+  padding:60px 20px;
+
+  /* এখানে background যোগ */
+  background: linear-gradient(135deg, #6a00ff, #ff0099);
+  color: #ffffff;
+  position:relative;
+}
+
+/* গ্রিড যেনো পরিষ্কার থাকে */
+.gallery-grid{
+  position:relative;
+  z-index:2;
+}
+
+/* Transition on images */
+.gallery-grid img{
+  transition: transform .4s ease, opacity .6s ease;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* ===== Gallery সেকশনের ব্যাকগ্রাউন্ড CSS শেষ ===== */
+
+
+/* ফুটারের লেখা */
+.footer p{
+  margin:6px 0;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+}
+.social-links {
+    margin-top: 15px;
+}
+
+.social-link {
+    display: block;
+    width: fit-content;
+    margin: 8px 0;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Facebook */
+.social-link.facebook {
+    background: linear-gradient(135deg, #1877f2, #25D366);
+}
+
+/* YouTube */
+.social-link.youtube {
+    background: linear-gradient(135deg, #25D366, #0f5bd8);
+}
+
+/* Hover Effect */
+.social-link:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* পুরো ফুটারে হোভার */
+.footer:hover .f-title{
+  letter-spacing:1px;
+}
+
+/* ===== ফুটারের CSS শেষ ===== */
+
+/* Countdown */
+.countdown{
+margin-top:15px;
+background:rgba(0,0,0,.4);
+padding:10px;
+border-radius:60px;
+}
+
+/* ===== Landing Page CSS End ===== */
+/* ===== WhatsApp floating বাটনের CSS শুরু ===== */
+
+.wa-float{
+  position:fixed;
+  right:18px;
+  bottom:20px;
+
+  background:#25D366;
+  color:#ffffff;
+
+  padding:10px 16px;
+  border-radius:30px;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  text-decoration:none;
+  font-weight:bold;
+  z-index:9999;
+
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+/* হোভার ইফেক্ট */
+.wa-float:hover{
+  transform:scale(1.08);
+  box-shadow:0 8px 22px rgba(0,0,0,.2);
+}
+
+/* Icon effect */
+.wa-icon{
+  font-size:20px;
+  animation: pulse 1.6s infinite;
+}
+
+/* pulse animation */
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.12);}
+  100%{transform:scale(1);}
+}
+
+/* মোবাইলেও সব সময় থাকবে */
+@media(max-width:500px){
+  .wa-text{
+    font-size:14px;
+  }
+}
+
+/* ===== WhatsApp floating বাটনের CSS শেষ ===== */
+/* ===== Student Review Section এর CSS শুরু ===== */
+
+.reviews{
+  padding:70px 20px;
+  text-align:center;
+  color: #ffffff;
+
+  /* আকর্ষণীয় ব্যাকগ্রাউন্ড */
+  background: linear-gradient(140deg, #4b00ff, #ff0088);
+  position:relative;
+}
+
+/* Grid */
+.review-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:15px;
+  max-width:1100px;
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+/* Card */
+.review-card{
+  background:#ffffff;
+  padding:20px;
+  border-radius:18px;
+  color:#000000;
+
+  opacity:0;
+  transform:translateY(35px);
+
+  transition: all .6s ease;
+}
+
+/* show state */
+.review-card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.review-card{
+  width: 100%;
+  height: auto;
+}
+.review-card img{
+  width: 100%;
+}
+/* Hover */
+.review-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
+
+/* Text lines hover */
+.review-card .line:hover{
+  letter-spacing:1px;
+  transition: all .4s ease;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .review-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+
+@media(max-width:500px){
+  .review-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* ===== Student Review Section এর CSS শেষ ===== */
+/* ===== শুরু: Scroll To Top Button Style ===== */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 90px;       /* WhatsApp বাটনের উপরে */
+    right: 25px;
+    z-index: 999;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    outline: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;      /* শুরুতে দেখা যাবে না */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#scrollToTopBtn:hover {
+    background-color: #ffaa00;
+}
+/* ===== শেষ: Scroll To Top Button Style ===== */
+/* ===== শুরু: Countdown Highlight Animation ===== */
+.countdown-hand {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+    animation: pointUp 1.3s infinite;
+}
+
+/* উপরের দিকে ইশারা করা অ্যানিমেশন */
+@keyframes pointUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-15px); /* উপরের দিকে যাবে */
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* ===== শেষ: Countdown Highlight Animation ===== */
